@@ -31,9 +31,8 @@ public class CalculateWeeklySalary {
             if( baseSalary >= 1000){
 
                 //The weekly working hour standard is 40 hours per week.
-                if(weeklyWorkingHours > 40){
+                if(weeklyWorkingHours >= 40){
                     weeklySalary = baseSalary + ((weeklyWorkingHours - 40) * (hourlyWageCalculations.weekdaysHourlyWage(baseSalary) * 1.5));
-                    System.out.println("weeklyWorkingHours > 40");
                     if(weekendWorkingHours > 0){
                         weeklySalary = hourlyWageCalculations.weekendHourlyWage(weekendWorkingHours, weeklySalary, workingWeekendBonus, wageIncreaseRate);
                     }
